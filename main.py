@@ -10,6 +10,7 @@ import numpy as np
 # you should be able to change this to any int and your
 # whole program will still work correctly. TEST THIS!
 SIZE = 10
+STATS_SIZE = 4
 
 # creates a numpy array of size SIZE filled with 0s.
 numbers = np.array([0] * SIZE, dtype=int)
@@ -31,8 +32,6 @@ print("[", end='')
 for i in range(SIZE):
     print(numbers[i], end=' ')
 print("]", end='')
-exit()
-
 print()
 
 # now make an integer array of size 4 to hold stats, call it 'stats'
@@ -45,14 +44,12 @@ print()
 # average may calculate as a float, make it an int to store it in the stats array
 # or just use integer divsion to guarantee an int when you calculate
 
-###########################################################
-# erase this comment and code filling your stats array here
-###########################################################
-
+stats = np.array([0] * STATS_SIZE, dtype=int)
+stats[0] = numbers[0]
 
 # When you have your stats array working, uncomment this code to display the stats.
 #
-#print("Min: ", stats[0])
+print("Min: ", stats[0])
 #print("Max: ", stats[1])
 #print("Total: ", stats[2])
 #print("Average: ", stats[3])    
