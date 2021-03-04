@@ -46,11 +46,14 @@ print()
 
 stats = np.array([0] * STATS_SIZE, dtype=int)
 stats[0] = numbers[0]
-
+stats[1] = numbers[0]
+for i in range(1, SIZE):
+    if numbers[i] > stats[1]: stats[1] = numbers[i]
+    
 # When you have your stats array working, uncomment this code to display the stats.
 #
 print("Min: ", stats[0])
-#print("Max: ", stats[1])
+print("Max: ", stats[1])
 #print("Total: ", stats[2])
 #print("Average: ", stats[3])    
 print()
