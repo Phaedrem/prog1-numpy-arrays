@@ -9,7 +9,7 @@ import numpy as np
 # SIZE is a global constant, use this throughout your program.
 # you should be able to change this to any int and your
 # whole program will still work correctly. TEST THIS!
-SIZE = 4
+SIZE = 10
 STATS_SIZE = 4
 
 # creates a numpy array of size SIZE filled with 0s.
@@ -45,19 +45,24 @@ print()
 # or just use integer divsion to guarantee an int when you calculate
 
 stats = np.array([0] * STATS_SIZE, dtype=int)
+
 stats[0] = numbers[0]
 for i in range(1, SIZE):
     if numbers[i] < stats[0]: stats[0] = numbers[i]
+
 stats[1] = numbers[0]
 for i in range(1, SIZE):
     if numbers[i] > stats[1]: stats[1] = numbers[i]
+
 for i in range(SIZE):
     stats[2] += numbers[i]
-    
+
+stats[3] = (int(stats[2])/int(SIZE))
+            
 # When you have your stats array working, uncomment this code to display the stats.
 #
 print("Min: ", stats[0])
 print("Max: ", stats[1])
 print("Total: ", stats[2])
-#print("Average: ", stats[3])    
+print("Average: ", stats[3])    
 print()
