@@ -1,8 +1,8 @@
-# 
-# 
-# your comment header here
-# 
-# 
+######################
+# Name: Darren Bowers
+# Coding 05
+# Purpose: Assignment to introduce arrays and how to manipulate them.
+######################
 
 import numpy as np
 
