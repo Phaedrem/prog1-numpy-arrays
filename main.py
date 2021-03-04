@@ -9,7 +9,7 @@ import numpy as np
 # SIZE is a global constant, use this throughout your program.
 # you should be able to change this to any int and your
 # whole program will still work correctly. TEST THIS!
-SIZE = 10
+SIZE = 20
 STATS_SIZE = 4
 
 # creates a numpy array of size SIZE filled with 0s.
@@ -50,9 +50,7 @@ stats[0] = numbers[0]
 for i in range(1, SIZE):
     if numbers[i] < stats[0]: stats[0] = numbers[i]
 
-stats[1] = numbers[0]
-for i in range(1, SIZE):
-    if numbers[i] > stats[1]: stats[1] = numbers[i]
+stats[1] = numbers[SIZE-1]
 
 for i in range(SIZE):
     stats[2] += numbers[i]
