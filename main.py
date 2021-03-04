@@ -21,18 +21,17 @@ print()
 
 # now fill it with 10,20,30, etc ***using a loop***
 
-for numbers in range(SIZE):
-    numbers = (numbers+1)*10
-    print(numbers)
-print()
-exit()
+for i in range(SIZE):
+    numbers[i] = (i+1)*10
 
 # show the array again but USE A LOOP TO DO IT
 print("All the numbers...")
 
-##############################################
-# erase this comment and code your loop here
-##############################################
+print("[", end='')
+for i in range(SIZE):
+    print(numbers[i], end=' ')
+print("]", end='')
+exit()
 
 print()
 
